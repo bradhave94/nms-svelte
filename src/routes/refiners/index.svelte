@@ -18,7 +18,7 @@
 
 <svelte:head>
 	<title>Refiners</title>
-	<link rel="stylesheet" href="../static/css/datatable.css" />
+	<link rel="stylesheet" href="/css/datatable.css" />
 </svelte:head>
 
 <h1>products</h1>

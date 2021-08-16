@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="../static/css/tailwind.css" />
+	<link rel="stylesheet" href="/css/tailwind.css" />
 </svelte:head>
 
 <main>

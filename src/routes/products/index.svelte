@@ -22,7 +22,7 @@
 
 <svelte:head>
 	<title>Data</title>
-	<link rel="stylesheet" href="../static/css/datatable.css" />
+	<link rel="stylesheet" href="/css/datatable.css" />
 </svelte:head>
 <section class="container mx-auto p-6 font-mono">
 	<div class="w-full mb-8 overflow-hidden">
