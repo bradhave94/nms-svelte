@@ -7,7 +7,6 @@
     padding: 0.75rem 1rem;
     margin: 1rem 0;
     display: inline-block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
@@ -103,11 +102,6 @@
 .datatable .dt-table tbody tr {
     transition: all, 0.3s;
 }
-
-.datatable .dt-table tbody tr:nth-child(even) {
-    background-color: #fafafa;
-}
-
 .datatable .dt-pagination {
     background: #fff;
     flex-direction: row-reverse;

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/css/tailwind.css" />
 </svelte:head>
 
-<main>
+<main class="bg-black">
 	<slot />
 </main>
 

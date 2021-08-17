@@ -1,18 +1,22 @@
 {
-  "name": "~TODO~",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0-next.27",
-    "@sveltejs/kit": "next",
-    "svelte": "^3.34.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "svelte-simple-datatables": "^0.1.25"
-  }
+	"name": "~TODO~",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "concurrently --kill-others \"svelte-kit dev\" \"npx tailwindcss -c ./tailwind.config.cjs -o ./static/css/tailwind.css --jit --purge './**/*.svelte'  --watch\"",
+		"dev2": "svelte-kit dev",
+		"css": "npx tailwindcss -i ./src/tailwind.css -o ./static/css/tailwind.css --jit --purge './**/*.svelte'  --watch",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-netlify": "^1.0.0-next.27",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.34.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"concurrently": "^6.2.1",
+		"svelte-simple-datatables": "^0.1.25",
+		"tailwindcss": "^2.2.7"
+	}
 }
