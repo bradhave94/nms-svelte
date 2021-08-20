@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply py-2 px-6 text-center font-bold rounded-xl transition duration-200;
+}
+
+.btn-dark {
+    @apply bg-dark text-white border-dark border-2 hover:bg-dark-darker hover:border-dark-darker;
+}
+
+.btn-dark-outline {
+    @apply border-dark text-dark border-2 hover:bg-dark hover:text-white
+}
+
+.btn-white {
+    @apply bg-white text-dark border-white border-2 hover:bg-white hover:border-white;
+}
+
+.btn-white-outline {
+    @apply border-white text-white border-2 hover:bg-white hover:text-white
+}

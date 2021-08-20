@@ -1,10 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
 	import Nav from '../components/nav.svelte'
-
-	onMount(async () => {
-		document.querySelector('#svelte').style.display = ''
-	});
 </script>
 
 <svelte:head>

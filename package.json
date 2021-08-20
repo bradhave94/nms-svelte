@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "npm-run-all --parallel dev:*",
 		"dev:svelte": "svelte-kit dev",
-		"dev:css": "npx tailwindcss -c ./tailwind.config.cjs -o ./static/css/tailwind.css --watch",
+		"dev:css": "npx tailwindcss -i ./src/css/tailwind.css -c ./tailwind.config.cjs -o ./static/css/tailwind.css --watch",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview"
 	},
