@@ -47,7 +47,7 @@
     });
 </script>
 
-<nav class="relative px-4 py-6 flex justify-between items-center bg-dark-darker text-white">
+<nav class="fixed top-0 w-full z-20 px-4 py-6 flex justify-between items-center bg-dark-darker text-white">
 	<a rel="prefetch" class="lg:ml-3 leading-none" href="/">
 		<img src="./images/logo-nms.png" alt="nomansskyrecipes Logo" width="300" height="29">
 	</a>

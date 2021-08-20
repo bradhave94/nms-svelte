@@ -202,53 +202,6 @@ const data = [
 		],
 	},
 	{
-		id: 'POWERCELL2',
-		name: 'Advanced Ion Battery',
-		type: 'product',
-		subtitle: 'Portable Energy Storage',
-		description:
-			'Powerful energy storage unit. Used in a wide variety of <COMMODITY>defensive<> and <COMMODITY>hazard protection<> systems.\n\nConstructed from <TECHNOLOGY>Ionised Cobalt<> and <EARTH>Pure Ferrite<>, and occasionally found in cylindrical metal containers.',
-		base_value: 500,
-		category: 'product_category_consumable',
-		trade_category: 'trade_category_none',
-		color: '#a9ffa923',
-		icon: 'PRODUCT.POWERCELL2.png',
-		ingredients: [
-			{
-				id: 'CAVE2',
-				amount: 10,
-			},
-			{
-				id: 'LAND2',
-				amount: 20,
-			},
-		],
-		recipes: [
-			{
-				id: 'REFINERECIPE_262',
-				name: 'Advanced Ion Capture',
-				result: {
-					id: 'POWERCELL2',
-					amount: 1,
-				},
-				ingredients: [
-					{
-						id: 'LAND2',
-						amount: 10,
-					},
-					{
-						id: 'CATALYST2',
-						amount: 10,
-					},
-					{
-						id: 'ASTEROID1',
-						amount: 10,
-					},
-				],
-			},
-		],
-	},
-	{
 		id: 'SHIPCHARGE',
 		name: 'Starshield Battery',
 		type: 'product',
@@ -13769,7 +13722,7 @@ const data = [
 				amount: 2,
 			},
 			{
-				id: 'POWERCELL2',
+				id: 'POWERCELL',
 				amount: 1,
 			},
 		],

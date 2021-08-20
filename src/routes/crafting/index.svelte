@@ -16,6 +16,7 @@
 			filter: 'Search'
 		}
     }
+	console.log(products)
 </script>
 
 <style>
@@ -55,7 +56,7 @@
 				<a rel="prefetch" href="/{product.name.replace(/ /g, '-')}">
 					<div class="flex items-center text-sm">
 						<div class="relative w-16 h-16 mr-3 md:block">
-							<img class="object-cover w-full h-full" src="/images/icons/{product.icon}" alt="{product.name}" width="64" height="64" loading="lazy" />
+							<img class="object-cover w-full h-full" src="/images/icons/{product.data.icon}" alt="{product.name}" width="64" height="64" loading="lazy" />
 						</div>
 						<div>
 							<p class="font-semibold">{product.name}</p>
@@ -63,7 +64,7 @@
 					</div>
 				</a>
 			  </td>
-			  {#each product.ingredients as ingredient}
+			  {#each product.data.ingredients as ingredient}
 			  <td class="px-4 py-3 text-ms font-semibold border hover:bg-dark-darker transition border-dark-dark">
 				<a rel="prefetch" href="/{ingredient.name.replace(/ /g, '-')}">
 					<div class="flex items-center text-sm">
@@ -77,14 +78,14 @@
 				</a>
 			  </td>
 			  {/each}
-			  {#if product.ingredients.length == 2 }
+			  {#if product.data.ingredients.length == 2 }
 			  <td class="px-4 py-3 text-ms font-semibold border border-dark-dark"></td>
 			  {/if}
-			  {#if product.ingredients.length == 1 }
+			  {#if product.data.ingredients.length == 1 }
 			  <td class="px-4 py-3 text-ms font-semibold border border-dark-dark"></td>
 			  <td class="px-4 py-3 text-ms font-semibold border border-dark-dark"></td>
 			  {/if}
-			  <td class="px-4 py-3 text-ms font-semibold border border-dark-dark">{product.base_value}</td>
+			  <td class="px-4 py-3 text-ms font-semibold border border-dark-dark">{product.data.base_value}</td>
 			</tr>
 			{/each}
 		  </tbody>

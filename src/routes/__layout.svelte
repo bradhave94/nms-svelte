@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/css/tailwind.css" />
 </svelte:head>
 
-<main class="bg-black">
+<main class="bg-black pt-24">
 	<Nav/>
 	<slot />
 </main>

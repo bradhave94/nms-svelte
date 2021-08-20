@@ -16,43 +16,59 @@ function compare(a, b) {
 
 data.sort(compare);
 
-/**
- * @type {{ id: string; name: string; result: { id: string; amount: number; }; ingredients: { id: string; amount: number; }[]; }[]}
- */
 const refiner = [];
 
-/**
- * @type {{ id: string; name: string; type: string; subtitle: string; description: string; base_value: number; category: string; trade_category: string; color: string; icon: string; ingredients: { id: string; amount: number; }[]; recipes: { id: string; name: string; result: { id: string; amount: number; }; ingredients: { id: string; amount: number; }[]; }[]; }[]}
- */
 const food = [];
 
-/**
- * @type {{ id: string; name: string; type: string; subtitle: string; description: string; base_value: number; category: string; trade_category: string; color: string; icon: string; ingredients: { id: string; amount: number; }[]; recipes: { id: string; name: string; result: { id: string; amount: number; }; ingredients: { id: string; amount: number; }[]; }[]; }[]}
- */
 let products = [];
 
-/**
- * @type {{ id: string; name: string; type: string; subtitle: string; description: string; base_value: number; category: string; trade_category: string; color: string; icon: string; ingredients: { id: string; amount: number; }[]; recipes: { id: string; name: string; result: { id: string; amount: number; }; ingredients: { id: string; amount: number; }[]; }[]; }[]}
- */
 let base = [];
 
 data.forEach(async function (item) {
 	if (item.recipes) {
 		item.recipes.forEach(async function (r) {
 			if (r.id.includes('REFINERECIPE_')) {
-					r.result.name = getById(r.result.id).name;
-					r.result.icon = getById(r.result.id).icon;
-					r.ingredients.forEach(async function (r) {
-						r.name = getById(r.id).name;
-						r.icon = getById(r.id).icon;
+				let recipe = {
+					name: getById(r.result.id).name,
+					data: {
+						ingredients: r.ingredients,
+						result: {
+							name: getById(r.result.id).name,
+							icon: getById(r.result.id).icon,
+						},
+					},
+				};
+
+				if (recipe.data.ingredients.length) {
+					recipe.data.ingredients.forEach(async function (item) {
+						item.name = getById(item.id).name;
+						item.icon = getById(item.id).icon;
 					});
-				refiner.push(r);
+				}
+				refiner.push(recipe);
+			}
+
+			if (r.id.includes('RECIPE_') && item.id.includes('FOOD_')) {
+				let recipe = {
+					name: getById(r.result.id).name,
+					data: {
+						ingredients: r.ingredients,
+						result: {
+							name: getById(r.result.id).name,
+							icon: getById(r.result.id).icon,
+						},
+					},
+				};
+
+				if (recipe.data.ingredients.length) {
+					recipe.data.ingredients.forEach(async function (item) {
+						item.name = getById(item.id).name;
+						item.icon = getById(item.id).icon;
+					});
+				}
+				food.push(recipe);
 			}
 		});
-	}
-
-	if (item.id.includes('FOOD_')) {
-		food.push(item);
 	}
 
 	if (item.icon.includes('BUILDABLE')) {
@@ -70,13 +86,22 @@ data.forEach(async function (item) {
 		item.category != 'product_category_building_part' &&
 		item.ingredients.length
 	) {
-		if (item.ingredients.length) {
-			item.ingredients.forEach(async function (item) {
+		let product = {
+			name: item.name,
+			data: {
+				icon: item.icon,
+				ingredients: item.ingredients,
+				base_value: item.base_value,
+			},
+		};
+		if (product.data.ingredients.length) {
+			product.data.ingredients.forEach(async function (item) {
 				item.name = getById(item.id).name;
 				item.icon = getById(item.id).icon;
 			});
 		}
-		products.push(item);
+
+		products.push(product);
 	}
 });
 

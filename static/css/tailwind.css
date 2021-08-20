@@ -700,6 +700,10 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -738,8 +742,8 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mb-8 {
@@ -748,10 +752,6 @@ video {
 
 .mr-3 {
   margin-right: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -786,16 +786,8 @@ video {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-16 {
   height: 4rem;
-}
-
-.max-h-8 {
-  max-height: 2rem;
 }
 
 .w-4 {
@@ -824,12 +816,6 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
-}
-
-.max-w-max {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
 }
 
 .max-w-lg {
@@ -980,16 +966,8 @@ video {
   background-size: cover;
 }
 
-.bg-right {
-  background-position: right;
-}
-
 .bg-center {
   background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .fill-current {
@@ -1035,11 +1013,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1060,29 +1033,19 @@ video {
   padding-right: 2rem;
 }
 
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.py-11 {
-  padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pt-6 {
@@ -1103,6 +1066,10 @@ video {
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-left {
@@ -1141,14 +1108,14 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-semibold {
@@ -1343,14 +1310,14 @@ video {
   opacity: 0.75;
 }
 
-.hover\:bg-dark-light:hover {
-  --tw-bg-opacity: 1;
-  background-color: hsla(204, 35%, 24%, var(--tw-bg-opacity));
-}
-
 .hover\:bg-dark-darker:hover {
   --tw-bg-opacity: 1;
   background-color: hsla(204, 35%, 5%, var(--tw-bg-opacity));
+}
+
+.hover\:bg-dark-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsla(204, 35%, 24%, var(--tw-bg-opacity));
 }
 
 .focus\:border-transparent:focus {
