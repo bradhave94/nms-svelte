@@ -49,7 +49,7 @@
 			{#each $rows as product, i}
 			<tr class="text-gray-700 {i % 2 == 0 ? 'bg-dark' : 'bg-dark-light'}">
 			  <td class="px-4 py-3 border hover:bg-dark-darker transition">
-				<a rel="prefetch" href="/{product.name.replace(/ /g, '-').toLowerCase()}">
+				<a rel="prefetch" href="/{product.name.replace(/ /g, '-')}">
 					<div class="flex items-center text-sm">
 						<div class="relative w-16 h-16 mr-3 md:block">
 							<img class="object-cover w-full h-full" src="/images/icons/{product.icon}" alt="{product.name}" width="64" height="64" loading="lazy" />
@@ -62,7 +62,7 @@
 			  </td>
 			  {#each product.ingredients as ingredient}
 			  <td class="px-4 py-3 text-ms font-semibold border hover:bg-dark-darker transition">
-				<a rel="prefetch" href="/{ingredient.name.replace(/ /g, '-').toLowerCase()}">
+				<a rel="prefetch" href="/{ingredient.name.replace(/ /g, '-')}">
 					<div class="flex items-center text-sm">
 						<div class="relative w-16 h-16 mr-3 md:block">
 							<img class="object-cover w-full h-full" src="/images/icons/{ingredient.icon}" alt="" loading="lazy" />

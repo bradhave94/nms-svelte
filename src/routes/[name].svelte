@@ -7,10 +7,11 @@
 	export const load = async ({ page }) => {
 		const name = page.params.name.replace(/-/g, ' ')
 		let item
+		console.log(name)
 		if (name.includes('refinerecipe_'))
-			item = refiner.find(p => p.id.toLowerCase() === name);
+			item = refiner.find(p => p.id === name);
 		else
-			item = data.find(p => p.name.toLowerCase() === name);
+			item = data.find(p => p.name === name);
 
 		return {
 			props: { item }
@@ -26,11 +27,17 @@
 </style>
 
 <svelte:head>
-	<title>{item.name}</title>
+	<title>{item ? item.name : "Item not found"}</title>
 </svelte:head>
 
-<section class="container mx-auto py-6 font-mono">
-	<img src="/images/{item.icon}" alt="">
+
+
+{#if item}
+<section class="container mx-auto py-6 font-mono text-white">
+	<img src="/images/icons/{item.icon}" alt="">
 	<h1>{item.name}</h1>
 	<p>{item.description}</p>
 </section>
+{/if}
+
+

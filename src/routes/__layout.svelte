@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import Nav from '../components/nav.svelte'
 
 	onMount(async () => {
 		document.querySelector('#svelte').style.display = ''
@@ -11,6 +12,7 @@
 </svelte:head>
 
 <main class="bg-black">
+	<Nav/>
 	<slot />
 </main>
 
