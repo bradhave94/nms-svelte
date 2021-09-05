@@ -1,3 +1,9 @@
+
+<script>
+    import data from '$data/Products.json';
+    console.log(data[0])
+</script>
+
 <div class="container mx-auto pt-20 pb-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
     <div>
         <div class="rounded-lg overflow-hidden">

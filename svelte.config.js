@@ -12,6 +12,7 @@ const config = {
 					$images: resolve('./static/images'),
 					$css: resolve('./static/css'),
 					$js: resolve('./static/js'),
+					$data: resolve('./static/data'),
 				},
 			},
 			ssr: {
